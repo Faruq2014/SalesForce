@@ -25,7 +25,8 @@ public static WebDriver driver;
 	driver.findElement(By.xpath("(//div[@class='dropdown']/a)[2]")).click();
 	// tag name is always i frame.
 	int size = driver.findElements(By.tagName("iframe")).size();
-	System.out.println("how many i frame in this page "+size);
+	System.out.println("how many i frame in this page "+size); 
+	
 	//Commented the code for finding the index of the element
     driver.switchTo().frame(0); //Switching to the frame
     
@@ -34,7 +35,7 @@ public static WebDriver driver;
 	
 	driver.switchTo().defaultContent();
 	Thread.sleep(2000);
-	driver.findElement(By.cssSelector("input[id^='username']")).sendKeys("fae");
+	driver.findElement(By.cssSelector("input[id^='username']")).sendKeys("faruq");
 	System.out.println("title is "+ driver.getTitle());
 	
 	}

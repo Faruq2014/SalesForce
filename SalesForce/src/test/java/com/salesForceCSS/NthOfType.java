@@ -27,7 +27,7 @@ public void openApp() {
   
   }
 @Test(priority=1)
-public void ntnOfTypeNumbering() throws Throwable {
+public void nthOfTypeNumbering() throws Throwable {
 	Thread.sleep(1000);
 	WebElement ele=driver.findElement(By.cssSelector("[class='wwww-main-nav searchEnabled']>li:nth-child(2)"));
 	Actions action = new Actions(driver);

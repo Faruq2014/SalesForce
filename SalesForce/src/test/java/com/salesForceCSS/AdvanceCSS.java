@@ -26,7 +26,7 @@ public void openApp() {
   
   }
 @Test(priority=1)
-public void direcChild() throws Throwable {
+public void directChild() throws Throwable {
 	WebDriverWait wait = new WebDriverWait(driver,30);
 	//wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("[aria-label*='Login']>a")));
 	driver.findElement(By.cssSelector("[aria-label*='Login']>a")).click();
@@ -36,7 +36,9 @@ public void direcChild() throws Throwable {
 }
 
 @Test(priority=2)
-public void directntnChildNumbering() throws Throwable {	
+public void directntnChildNumbering() throws Throwable {
+	
+	// css formula [attribute='value']>direct child or indirect child:nth-child(numbering)
 	Thread.sleep(1000);
 	WebElement ele=driver.findElement(By.cssSelector("[class='wwww-main-nav searchEnabled']>li:nth-child(3)"));
 	Actions action = new Actions(driver);
@@ -46,7 +48,8 @@ public void directntnChildNumbering() throws Throwable {
 
 
 @Test(priority=3)
-public void directNtnFirstChild() throws Throwable {	
+public void directNtnFirstChild() throws Throwable {
+	
 	Thread.sleep(1000);
 	WebElement ele=driver.findElement(By.cssSelector("ul[class$='-main-nav searchEnabled']>li:first-child"));
 	Actions action = new Actions(driver);

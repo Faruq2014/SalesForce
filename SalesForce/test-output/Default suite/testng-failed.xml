@@ -3,12 +3,11 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.salesForceCSS.NthOfType">
+      <class name="com.SalesForceWindowHandleIterator.MasterURL">
         <methods>
-          <include name="openApp"/>
-          <include name="ntnOfTypeLastChild"/>
+          <include name="urlTesting"/>
         </methods>
-      </class> <!-- com.salesForceCSS.NthOfType -->
+      </class> <!-- com.SalesForceWindowHandleIterator.MasterURL -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

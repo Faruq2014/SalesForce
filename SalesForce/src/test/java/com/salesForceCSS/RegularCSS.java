@@ -26,33 +26,35 @@ public void openAPP() {
 @Test(priority=0)
 public void oneAttributeTest() {
 	
-	//CSS formula = [attribute=’value’]
+	//CSS formula (tag name is optional) = [attribute='value']
 	
 	//driver.findElement(By.cssSelector("[id='username']")).sendKeys("aaaa");
 	//driver.findElement(By.cssSelector("#username")).sendKeys("aaaa");
 	
 	//driver.findElement(By.cssSelector("[name='username']")).sendKeys("aaaa");
-	//driver.findElement(By.cssSelector(".username")).sendKeys("aaaa");
+	//driver.findElement(By.cssSelector("[class='input r4 wide mb16 mt8 username']")).sendKeys("aaaa");
+	//driver.findElement(By.cssSelector(".input r4 wide mb16 mt8 username")).sendKeys("aaaa");
 	
 	driver.findElement(By.cssSelector("[type='email']")).sendKeys("aaaa");
 }
 @Test(priority=1)
 public void twoAttributeTest() {
-	//CSS formula = [attribute=’value’][attribute=’value’]
+	//CSS formula = [attribute='value'][attribute='value']
 	driver.findElement(By.cssSelector("[name='pw'][type='password']")).sendKeys("bbbbbb");
 }
 
 @Test(priority=2)
 public void startWithAttributeTest() {
-	//CSS formula = [attribute^=’value’]  ^ means start with
+	//CSS formula = [attribute^='value']  ^ (^ carat,circumflex, in coding its called hat) means start with
 	driver.findElement(By.cssSelector("[id^='forgot_password']")).click();
 }
 
 
-@Test(priority=3)
+@Test(priority=3) 
 public void endsWithAttributeTest() {
-	//CSS formula = [attribute$=’value’] $ mean ends with (do not use it, really does not work.)
-	driver.findElement(By.cssSelector("[class$='input wide mb12 mt8 username']")).sendKeys("cccc");
+	//CSS formula = [attribute$=’value’] $ mean ends with (do not use it, really does not work,work sometime.)
+	//driver.findElement(By.cssSelector("[class$='input wide mb12 mt8 username']")).sendKeys("cccc");(not an ideal one)
+	driver.findElement(By.cssSelector("[class$=' wide mb12 mt8 username']")).sendKeys("ddddd");
 }
 
 @Test(priority=4)

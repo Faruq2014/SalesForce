@@ -21,5 +21,8 @@ div[class='sub-nav'] ul li:nth-child(13)
 
 
 div[class='sub-nav'] ul>li:nth-child(1) a:nth-child(1)
+
+o-20 people 
+[aria-labelledby='CompanyEmployees-descby']>div:nth-child(2)
  */
 }

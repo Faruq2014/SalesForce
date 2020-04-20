@@ -3,11 +3,12 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.SalesForceWindowHandleIterator.MasterURL">
+      <class name="com.SalesForceWindowHandleIterator.MasterIndexiterator">
         <methods>
-          <include name="urlTesting"/>
+          <include name="switchToChildWindow"/>
+          <include name="openApp"/>
         </methods>
-      </class> <!-- com.SalesForceWindowHandleIterator.MasterURL -->
+      </class> <!-- com.SalesForceWindowHandleIterator.MasterIndexiterator -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

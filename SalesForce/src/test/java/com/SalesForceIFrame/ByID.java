@@ -10,6 +10,18 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
 public class ByID {
+	/*
+	 * An I frame (Inline frame) is an HTML document embedded inside
+	 * another HTML document on a Web Page.
+	 * the I frame HTML element is often used to insert content 
+	 * from another source, such as an advertisement on a 
+	 * web side. 
+	 * i frame should have an id.
+	 * you must switch to default window to go to any other window that means
+	 * if there is more than one i frame and you need to work on next i frame
+	 * than you need to switch to default window first and then switch to 
+	 * next i frame. 
+	 */
 public static WebDriver driver;
 	
 	@BeforeClass
@@ -21,19 +33,17 @@ public static WebDriver driver;
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 	}
 	@Test
-	public void findByIndexTest() throws InterruptedException {
+	public void findByIDTest() throws InterruptedException {
 		
 	driver.findElement(By.xpath("(//div[@class='dropdown']/a)[2]")).click();
 	// tag name is always i frame.
 	int size = driver.findElements(By.tagName("iframe")).size();
 	System.out.println("how many i frame in this page "+size); 
 	
+	driver.switchTo().frame("marketing");
 	
-   // driver.switchTo().frame("marketing");//Switching to the frame by ID
-	
-	 WebElement ele=driver.findElement(By.xpath("(//*[@class='btn-container ']/a)[1]"));
-    driver.switchTo().frame(ele);
-	System.out.println("********We are switched to the iframe*******");
+  
+	//System.out.println("********We are switched to the iframe*******");
 	driver.findElement(By.xpath("(//*[@class='btn-container ']/a)[1]")).click();
 	
 	driver.switchTo().defaultContent();
@@ -41,6 +51,7 @@ public static WebDriver driver;
 	driver.findElement(By.cssSelector("input[id^='username']")).sendKeys("faruq");
 	System.out.println("title is "+ driver.getTitle());
 	
+	driver.quit();
 	}
 
 }

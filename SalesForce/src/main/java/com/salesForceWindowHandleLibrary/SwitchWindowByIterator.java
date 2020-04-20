@@ -74,4 +74,51 @@ public class SwitchWindowByIterator {
 		 }
 		return false;
 }
+	//lll
+	
+	public boolean toURL2(String URL) {  
+		//String Parent = driver.getWindowHandle();
+		Set<String> handler =  driver.getWindowHandles();
+		 java.util.Iterator<String> it=handler.iterator();
+		 String parentID = it.next();
+		 String childID = it.next();
+		 while(it.hasNext()) {
+			 for (String child : handler)
+			 if(!parentID.equalsIgnoreCase(childID)) {
+				 driver.switchTo().window(child);
+				 if (driver.getCurrentUrl().equalsIgnoreCase(URL)) {
+						return true;
+
+					}
+				 driver.switchTo().window(parentID);
+			 }
+			
+		 }
+		return false;
+}
+
+	//lll
+	
+	public boolean toIndex2 (int index) {  
+		//String Parent = driver.getWindowHandle();
+		Set<String> handler = driver.getWindowHandles();
+		 List<String> windowStrings = new ArrayList<>(handler);
+		 java.util.Iterator<String> it=windowStrings.iterator();
+		 String parentID = it.next();
+		 String childID = it.next();
+		 while(it.hasNext()) {
+			 for (String child : handler)
+			 if(!parentID.equalsIgnoreCase(childID)) {
+				 driver.switchTo().window(windowStrings.get(index));
+
+				 return true; 
+			 }
+			 driver.switchTo().window(parentID);
+		 }
+		return false;
+}
+	
+	
+	
+	
 }

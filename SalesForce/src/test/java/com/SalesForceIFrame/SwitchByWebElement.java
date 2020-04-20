@@ -1,13 +1,15 @@
 package com.SalesForceIFrame;
 
-import java.util.Set;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.Select;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
+
+import com.salesForceWindowHandleLibrary.WindowHandleLibrary;
 
 public class SwitchByWebElement {
 
@@ -23,35 +25,57 @@ public static WebDriver driver;
 	}
 	@Test
 	public void switchByElement() throws InterruptedException {
-	driver.findElement(By.xpath("(//div[@class='dropdown']/a)[2]")).click();
-	int size = driver.findElements(By.tagName("iframe")).size();
-	System.out.println(size);
-	//Commented the code for finding the index of the element
-    driver.switchTo().frame(0); //Switching to the frame
-	System.out.println("********We are switched to the iframe*******");
-	driver.findElement(By.xpath("( //*[@class='btn-container ']/a)[1]")).click();
-	driver.switchTo().defaultContent();
-	Thread.sleep(2000);
-	driver.findElement(By.cssSelector("input[id^='username']")).sendKeys("fae");
-	System.out.println("title is "+ driver.getTitle());
-	
-	Set<String> handler = driver.getWindowHandles();
-	java.util.Iterator<String> it=handler.iterator();
-    String parentWindowID = it.next();
-    System.out.println("parent window id is "+parentWindowID);
-    String childWindowID = it.next();
-    System.out.println("child window id is "+childWindowID);
-    driver.switchTo().window(childWindowID);
-    Thread.sleep(2000);
-    String childTitle= driver.getTitle();
-    System.out.println("child title is"+childTitle);
-    boolean ele1=driver.findElement(By.cssSelector("input[id^='UserFirstName']")).isDisplayed();
-   
-    if(ele1==true) {
-    	driver.findElement(By.cssSelector("input[id^='UserFirstName']")).sendKeys("faruq");	
-    }else {driver.findElement(By.xpath("(//div[@class='option-ui '])[1]")).click();
-    }
-    
-    //driver.findElement(By.cssSelector("input[id^='UserFirstName']")).sendKeys("fae");
-	}
+
+		//Click on login button
+		System.out.println("Click on login");
+		driver.findElement(By.xpath("//a[@href = 'https://login.salesforce.com/']")).click();
+
+		Thread.sleep(2000);
+
+		//go to iframe
+		System.out.println("Switching to Iframe");
+		driver.switchTo().frame(0);
+
+		//click on "Start my Free Trial"
+		System.out.println("Click on Start My Free Trial");
+		driver.findElement(By.xpath("//a[@class = 'btn btn-lg btn-neutral-snow salesforce-sans-regular    ']")).click();
+
+
+		// get window handles
+		System.out.println("Swithing to new window");
+		WindowHandleLibrary window = new WindowHandleLibrary(driver);
+		window.switchToWindowByIndex(1);
+
+		String title= driver.getTitle();
+
+		if (title.equalsIgnoreCase("Free Trial - Salesforce.com")){
+
+		System.out.println("Insert into the Form");
+		driver.findElement(By.xpath("//*[@class = 'option-ui '][1]")).click();
+
+		driver.findElement(By.xpath("//input[starts-with(@id, 'CompanyName')]")).sendKeys("Mollah INC");
+		driver.findElement(By.xpath("//input[starts-with(@id, 'UserTitle')]")).sendKeys("CEO");
+		driver.findElement(By.xpath("//*[@class = 'btn-container'][2]")).click();
+
+		driver.findElement(By.xpath("//input[@name= 'UserFirstName']")).sendKeys("UserFirstName");
+		driver.findElement(By.xpath("//input[starts-with(@id,'UserLastName')]")).sendKeys("UserLastName");
+		driver.findElement(By.xpath("(//*[@class = 'checkbox-ui'])[2]")).click();
+		}
+		else if(title.equalsIgnoreCase("Sales Cloud Free Trial - Salesforce.com")){
+
+		   //Fill the text fields
+		System.out.println("Insert into the Form");
+		driver.findElement(By.xpath("//input[@name= 'UserFirstName']")).sendKeys("UserFirstName");
+		driver.findElement(By.xpath("//input[starts-with(@id,'UserLastName')]")).sendKeys("UserLastName");
+		Select select = new Select(driver.findElement(By.xpath("//*[starts-with(@id,'CompanyEmployees')][1]")));
+		select.selectByVisibleText("1 - 20 employees");
+
+		driver.findElement(By.xpath("//*[@class = 'checkbox-ui']")).click();
+
+		}
+
+		//Close all the windows
+		System.out.println("Close all the windows");
+		//driver.quit();
+}
 }

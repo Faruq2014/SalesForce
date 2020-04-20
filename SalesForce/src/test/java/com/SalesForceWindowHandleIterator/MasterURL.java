@@ -38,32 +38,32 @@ public void urlTesting() throws InterruptedException {
 	SwitchWindowByIterator switchW = new SwitchWindowByIterator(driver);
 	
 	// window 1
-	switchW.toURL("https://www.facebook.com/about/privacy/update");
+	switchW.toURL2("https://www.facebook.com/about/privacy/update");
 	Thread.sleep(3000);
 	String childTitle1 = driver.getTitle();
 	System.out.println("Child1 title is " + childTitle1);
 	
 	// window 2
-	switchW.toURL("https://www.facebook.com/legal/terms/update");
+	switchW.toURL2("https://www.facebook.com/legal/terms/update");
 	Thread.sleep(3000);
 	String childTitle2 = driver.getTitle();
 	System.out.println("Child2 title is " + childTitle2);
 	
 	// window3
-	switchW.toURL("https://www.facebook.com/policies/cookies/");
+	switchW.toURL2("https://www.facebook.com/policies/cookies/");
 	Thread.sleep(3000);
 	String childTitle3 = driver.getTitle();
 	System.out.println("Child3 title is " + childTitle3);
 	
 	// back to parent window
 	Thread.sleep(2000);
-	switchW.toURL("https://www.facebook.com/");
+	switchW.toURL2("https://www.facebook.com/");
 	String ParenURL = driver.getCurrentUrl();
 	System.out.println("parent url is " + ParenURL);
 	
 	// working on a particular window
 	System.out.println(" working on a particular window>>>>>>>>>>>>>>>>>>>");
-		switchW.toURL("https://www.facebook.com/policies/cookies/");
+		switchW.toURL2("https://www.facebook.com/policies/cookies/");
 		Thread.sleep(3000);
 		 driver.findElement(By.cssSelector("#email")).sendKeys("abbbb");
 		 driver.findElement(By.cssSelector("#pass")).sendKeys("######");

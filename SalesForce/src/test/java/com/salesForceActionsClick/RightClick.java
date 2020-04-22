@@ -1,4 +1,4 @@
-package com.salesForceActionsRightClick;
+package com.salesForceActionsClick;
 
 import java.util.concurrent.TimeUnit;
 

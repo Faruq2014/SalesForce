@@ -1,29 +1,57 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="3" passed="3">
+<testng-results skipped="0" failed="0" ignored="0" total="5" passed="5">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="35529" started-at="2020-04-19T21:47:07 EDT" finished-at="2020-04-19T21:47:42 EDT">
+  <suite name="Default suite" duration-ms="31731" started-at="2020-04-21T22:06:57 EDT" finished-at="2020-04-21T22:07:29 EDT">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="35529" started-at="2020-04-19T21:47:07 EDT" finished-at="2020-04-19T21:47:42 EDT">
-      <class name="com.SalesForceWindowHandleI.WindowClientIndex">
-        <test-method status="PASS" signature="openApp()[pri:0, instance:com.SalesForceWindowHandleI.WindowClientIndex@49fc609f]" name="openApp" is-config="true" duration-ms="23690" started-at="2020-04-19T21:47:07 EDT" finished-at="2020-04-19T21:47:31 EDT">
+    <test name="Default test" duration-ms="31731" started-at="2020-04-21T22:06:57 EDT" finished-at="2020-04-21T22:07:29 EDT">
+      <class name="com.salesForceDropDown.MultiSelect">
+        <test-method status="PASS" signature="setUP()[pri:0, instance:com.salesForceDropDown.MultiSelect@cd2dae5]" name="setUP" is-config="true" duration-ms="19654" started-at="2020-04-21T22:06:57 EDT" finished-at="2020-04-21T22:07:16 EDT">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- openApp -->
-        <test-method status="PASS" signature="switchToChildWindow()[pri:1, instance:com.SalesForceWindowHandleI.WindowClientIndex@49fc609f]" name="switchToChildWindow" duration-ms="8475" started-at="2020-04-19T21:47:31 EDT" finished-at="2020-04-19T21:47:39 EDT">
+        </test-method> <!-- setUP -->
+        <test-method status="PASS" signature="openingTesst()[pri:0, instance:com.salesForceDropDown.MultiSelect@cd2dae5]" name="openingTesst" is-config="true" duration-ms="0" started-at="2020-04-21T22:07:16 EDT" finished-at="2020-04-21T22:07:16 EDT">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- switchToChildWindow -->
-        <test-method status="PASS" signature="switchToParentWindow()[pri:2, instance:com.SalesForceWindowHandleI.WindowClientIndex@49fc609f]" name="switchToParentWindow" duration-ms="3199" started-at="2020-04-19T21:47:39 EDT" finished-at="2020-04-19T21:47:42 EDT">
+        </test-method> <!-- openingTesst -->
+        <test-method status="PASS" signature="selectAllTest()[pri:1, instance:com.salesForceDropDown.MultiSelect@cd2dae5]" name="selectAllTest" duration-ms="2251" started-at="2020-04-21T22:07:16 EDT" finished-at="2020-04-21T22:07:19 EDT">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- switchToParentWindow -->
-        <test-method status="PASS" signature="allTest()[pri:3, instance:com.SalesForceWindowHandleI.WindowClientIndex@49fc609f]" name="allTest" duration-ms="114" started-at="2020-04-19T21:47:42 EDT" finished-at="2020-04-19T21:47:42 EDT">
+        </test-method> <!-- selectAllTest -->
+        <test-method status="PASS" signature="openingTesst()[pri:0, instance:com.salesForceDropDown.MultiSelect@cd2dae5]" name="openingTesst" is-config="true" duration-ms="1" started-at="2020-04-21T22:07:19 EDT" finished-at="2020-04-21T22:07:19 EDT">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- allTest -->
-      </class> <!-- com.SalesForceWindowHandleI.WindowClientIndex -->
+        </test-method> <!-- openingTesst -->
+        <test-method status="PASS" signature="deSelectTest()[pri:2, instance:com.salesForceDropDown.MultiSelect@cd2dae5]" name="deSelectTest" duration-ms="3130" started-at="2020-04-21T22:07:19 EDT" finished-at="2020-04-21T22:07:22 EDT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- deSelectTest -->
+        <test-method status="PASS" signature="openingTesst()[pri:0, instance:com.salesForceDropDown.MultiSelect@cd2dae5]" name="openingTesst" is-config="true" duration-ms="0" started-at="2020-04-21T22:07:22 EDT" finished-at="2020-04-21T22:07:22 EDT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openingTesst -->
+        <test-method status="PASS" signature="deSelectAllTest()[pri:3, instance:com.salesForceDropDown.MultiSelect@cd2dae5]" name="deSelectAllTest" duration-ms="3152" started-at="2020-04-21T22:07:22 EDT" finished-at="2020-04-21T22:07:25 EDT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- deSelectAllTest -->
+        <test-method status="PASS" signature="openingTesst()[pri:0, instance:com.salesForceDropDown.MultiSelect@cd2dae5]" name="openingTesst" is-config="true" duration-ms="1" started-at="2020-04-21T22:07:25 EDT" finished-at="2020-04-21T22:07:25 EDT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openingTesst -->
+        <test-method status="PASS" signature="SelectedOptionTest()[pri:4, instance:com.salesForceDropDown.MultiSelect@cd2dae5]" name="SelectedOptionTest" duration-ms="3289" started-at="2020-04-21T22:07:25 EDT" finished-at="2020-04-21T22:07:28 EDT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- SelectedOptionTest -->
+        <test-method status="PASS" signature="openingTesst()[pri:0, instance:com.salesForceDropDown.MultiSelect@cd2dae5]" name="openingTesst" is-config="true" duration-ms="1" started-at="2020-04-21T22:07:28 EDT" finished-at="2020-04-21T22:07:28 EDT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openingTesst -->
+        <test-method status="PASS" signature="allOptionTest()[pri:5, instance:com.salesForceDropDown.MultiSelect@cd2dae5]" name="allOptionTest" duration-ms="167" started-at="2020-04-21T22:07:28 EDT" finished-at="2020-04-21T22:07:28 EDT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- allOptionTest -->
+      </class> <!-- com.salesForceDropDown.MultiSelect -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

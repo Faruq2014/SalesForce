@@ -3,12 +3,12 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.salesForceDropDown.Basics">
+      <class name="com.salesForceDropDown.AssertionListDoesExist">
         <methods>
+          <include name="assertionTest"/>
           <include name="setUP"/>
-          <include name="allElementTest"/>
         </methods>
-      </class> <!-- com.salesForceDropDown.Basics -->
+      </class> <!-- com.salesForceDropDown.AssertionListDoesExist -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

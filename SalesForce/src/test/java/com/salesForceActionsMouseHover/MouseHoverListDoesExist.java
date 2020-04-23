@@ -13,7 +13,7 @@ import org.testng.annotations.Test;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
-public class MouseHoverListText {
+public class MouseHoverListDoesExist {
 
 	public static WebDriver driver;
 
@@ -40,27 +40,30 @@ public class MouseHoverListText {
 		Thread.sleep(1000);
 		List<WebElement> links = driver
 				.findElements(By.xpath("//div[@id='drawer_products']//div[@class='sub-nav']/ul/li"));
-		int count = links.size();
-		System.out.println(count);
-		for (int i = 0; i < count; i++) {
-			WebElement elements = links.get(i);
 
-			String text = elements.getText();
-			// System.out.println(text);
-			boolean status = elements.isEnabled();
-			// System.out.println(status);
-			// System.out.println(text + " is enable " + status);
-			System.out.println(text + ",");
+		String unOrganizedData = "What is Salesforce?,Products Overview,Pricing,Small Business,Artificial Intelligence,Faruq";
+		// csv=comma seperated file.
+		// you could have ; separated file.
+		// or any type of separated elements, just say spilt (;) or (.) or (,) and so on
+		String arrayEmployee[] = unOrganizedData.split(",");
 
-			if (text.equalsIgnoreCase("What is Salesforce? ")) {
-				elements.click();
+		for (String EachStr : arrayEmployee) {
 
+			boolean Found = false;
+
+			for (WebElement eachOne : links) {
+
+				if (EachStr.equals(eachOne.getText())) {
+					Found = true;
+					System.out.println(EachStr + " yes! String does exist");
+					break;
+				}
 			}
-			// break; //put break if you only want to print one i means (WebElement elements
-			// = links.get(i);)
-			// to print all 24 of them no break. keep looping
+			if (!Found) {
+				System.err.println(EachStr + " sorry! does not Exist");
+			}
+			// break;
 		}
 
 	}
-
 }

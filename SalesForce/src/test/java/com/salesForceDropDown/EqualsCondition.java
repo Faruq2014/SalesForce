@@ -8,6 +8,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.Select;
+import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
@@ -24,15 +25,15 @@ public class EqualsCondition {
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 	}
 
-	@Test(priority = 1)
+	// @Test(priority = 1)
 	public void indexTest() {
 		// is two elements equals? Basically we can compare index to index.
-		WebElement employee = driver.findElement(By.xpath("//select[starts-with(@id,'CompanyCountry-')]"));
-		Select select = new Select(employee);
-		List<WebElement> allEmployee = select.getOptions();
-		for (WebElement webElement : allEmployee) {
-			WebElement us = allEmployee.get(1);
-			boolean b = allEmployee.get(11).equals(us);
+		WebElement country = driver.findElement(By.xpath("//select[starts-with(@id,'CompanyCountry-')]"));
+		Select select = new Select(country);
+		List<WebElement> allcountry = select.getOptions();
+		for (WebElement webElement : allcountry) {
+			WebElement us = allcountry.get(1);
+			boolean b = allcountry.get(11).equals(us);
 			if (b == true) {
 				System.out.println("index=index");
 			} else {
@@ -43,15 +44,15 @@ public class EqualsCondition {
 		// select.selectByIndex(3);
 	}
 
-	@Test(priority = 2)
+	// @Test(priority = 2)
 	public void textTest() {
 		// is two elements equals? Basically we can compare text to text.
-		WebElement employee = driver.findElement(By.xpath("//select[starts-with(@id,'CompanyCountry-')]"));
-		Select select = new Select(employee);
-		List<WebElement> allEmployee = select.getOptions();
-		for (WebElement webElement : allEmployee) {
-			String us1 = allEmployee.get(1).getText();
-			boolean b = allEmployee.get(11).getText().equals(us1);
+		WebElement country = driver.findElement(By.xpath("//select[starts-with(@id,'CompanyCountry-')]"));
+		Select select = new Select(country);
+		List<WebElement> allcountry = select.getOptions();
+		for (WebElement webElement : allcountry) {
+			String us1 = allcountry.get(1).getText();
+			boolean b = allcountry.get(11).getText().equals(us1);
 			if (b == true) {
 				System.out.println("index=index");
 			} else {
@@ -62,23 +63,43 @@ public class EqualsCondition {
 		// select.selectByIndex(3);
 	}
 
-	@Test(priority = 3)
+	// @Test(priority = 3)
 	public void valueTest() {
 		// is two elements equals? Basically we can compare Attribute to Attribute(in
 		// this case it is value.)
-		WebElement employee = driver.findElement(By.xpath("//select[starts-with(@id,'CompanyCountry-')]"));
-		Select select = new Select(employee);
-		List<WebElement> allEmployee = select.getOptions();
-		for (WebElement webElement : allEmployee) {
-			String value = allEmployee.get(1).getAttribute("value");
+		WebElement country = driver.findElement(By.xpath("//select[starts-with(@id,'CompanyCountry-')]"));
+		Select select = new Select(country);
+		List<WebElement> allcountry = select.getOptions();
+		for (WebElement webElement : allcountry) {
+			String value = allcountry.get(1).getAttribute("value");
 			System.out.println("value is " + value);
-			String us1 = allEmployee.get(1).getAttribute("value");
-			boolean b = allEmployee.get(11).getAttribute("value").equals(us1);
+			String us1 = allcountry.get(1).getAttribute("value");
+			boolean b = allcountry.get(11).getAttribute("value").equals(us1);
 			if (b == true) {
 				System.out.println("index=index");
 			} else {
 				System.out.println("it is not equals");
 			}
+			break;
+		}
+		select.selectByIndex(3);
+	}
+
+	@Test(priority = 4)
+	public void value() {
+		// is two elements equals? Basically we can compare Attribute to Attribute(in
+		// this case it is value.)
+		WebElement country = driver.findElement(By.xpath("//select[starts-with(@id,'CompanyCountry-')]"));
+		Select select = new Select(country);
+		List<WebElement> allcountry = select.getOptions();
+		for (WebElement webElement : allcountry) {
+
+			String text = allcountry.get(1).getText();
+			System.out.println("value is " + text);
+			Assert.assertEquals(text, "United States");
+			String us1 = allcountry.get(1).getAttribute("value");
+			Assert.assertEquals(us1, "US");
+
 			break;
 		}
 		select.selectByIndex(3);

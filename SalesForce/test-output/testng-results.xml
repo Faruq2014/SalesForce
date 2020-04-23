@@ -1,57 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="5" passed="5">
+<testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="31731" started-at="2020-04-21T22:06:57 EDT" finished-at="2020-04-21T22:07:29 EDT">
+  <suite name="Default suite" duration-ms="17092" started-at="2020-04-22T21:55:56 EDT" finished-at="2020-04-22T21:56:13 EDT">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="31731" started-at="2020-04-21T22:06:57 EDT" finished-at="2020-04-21T22:07:29 EDT">
-      <class name="com.salesForceDropDown.MultiSelect">
-        <test-method status="PASS" signature="setUP()[pri:0, instance:com.salesForceDropDown.MultiSelect@cd2dae5]" name="setUP" is-config="true" duration-ms="19654" started-at="2020-04-21T22:06:57 EDT" finished-at="2020-04-21T22:07:16 EDT">
+    <test name="Default test" duration-ms="17092" started-at="2020-04-22T21:55:56 EDT" finished-at="2020-04-22T21:56:13 EDT">
+      <class name="com.salesForceDropDown.AssertionListDoesExist">
+        <test-method status="PASS" signature="setUP()[pri:0, instance:com.salesForceDropDown.AssertionListDoesExist@49fc609f]" name="setUP" is-config="true" duration-ms="16112" started-at="2020-04-22T21:55:56 EDT" finished-at="2020-04-22T21:56:12 EDT">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUP -->
-        <test-method status="PASS" signature="openingTesst()[pri:0, instance:com.salesForceDropDown.MultiSelect@cd2dae5]" name="openingTesst" is-config="true" duration-ms="0" started-at="2020-04-21T22:07:16 EDT" finished-at="2020-04-21T22:07:16 EDT">
+        <test-method status="PASS" signature="organizeDataTest()[pri:1, instance:com.salesForceDropDown.AssertionListDoesExist@49fc609f]" name="organizeDataTest" duration-ms="367" started-at="2020-04-22T21:56:12 EDT" finished-at="2020-04-22T21:56:12 EDT">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- openingTesst -->
-        <test-method status="PASS" signature="selectAllTest()[pri:1, instance:com.salesForceDropDown.MultiSelect@cd2dae5]" name="selectAllTest" duration-ms="2251" started-at="2020-04-21T22:07:16 EDT" finished-at="2020-04-21T22:07:19 EDT">
+        </test-method> <!-- organizeDataTest -->
+        <test-method status="PASS" signature="unOrganizeDataTest()[pri:2, instance:com.salesForceDropDown.AssertionListDoesExist@49fc609f]" name="unOrganizeDataTest" duration-ms="549" started-at="2020-04-22T21:56:12 EDT" finished-at="2020-04-22T21:56:13 EDT">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- selectAllTest -->
-        <test-method status="PASS" signature="openingTesst()[pri:0, instance:com.salesForceDropDown.MultiSelect@cd2dae5]" name="openingTesst" is-config="true" duration-ms="1" started-at="2020-04-21T22:07:19 EDT" finished-at="2020-04-21T22:07:19 EDT">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- openingTesst -->
-        <test-method status="PASS" signature="deSelectTest()[pri:2, instance:com.salesForceDropDown.MultiSelect@cd2dae5]" name="deSelectTest" duration-ms="3130" started-at="2020-04-21T22:07:19 EDT" finished-at="2020-04-21T22:07:22 EDT">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- deSelectTest -->
-        <test-method status="PASS" signature="openingTesst()[pri:0, instance:com.salesForceDropDown.MultiSelect@cd2dae5]" name="openingTesst" is-config="true" duration-ms="0" started-at="2020-04-21T22:07:22 EDT" finished-at="2020-04-21T22:07:22 EDT">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- openingTesst -->
-        <test-method status="PASS" signature="deSelectAllTest()[pri:3, instance:com.salesForceDropDown.MultiSelect@cd2dae5]" name="deSelectAllTest" duration-ms="3152" started-at="2020-04-21T22:07:22 EDT" finished-at="2020-04-21T22:07:25 EDT">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- deSelectAllTest -->
-        <test-method status="PASS" signature="openingTesst()[pri:0, instance:com.salesForceDropDown.MultiSelect@cd2dae5]" name="openingTesst" is-config="true" duration-ms="1" started-at="2020-04-21T22:07:25 EDT" finished-at="2020-04-21T22:07:25 EDT">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- openingTesst -->
-        <test-method status="PASS" signature="SelectedOptionTest()[pri:4, instance:com.salesForceDropDown.MultiSelect@cd2dae5]" name="SelectedOptionTest" duration-ms="3289" started-at="2020-04-21T22:07:25 EDT" finished-at="2020-04-21T22:07:28 EDT">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- SelectedOptionTest -->
-        <test-method status="PASS" signature="openingTesst()[pri:0, instance:com.salesForceDropDown.MultiSelect@cd2dae5]" name="openingTesst" is-config="true" duration-ms="1" started-at="2020-04-21T22:07:28 EDT" finished-at="2020-04-21T22:07:28 EDT">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- openingTesst -->
-        <test-method status="PASS" signature="allOptionTest()[pri:5, instance:com.salesForceDropDown.MultiSelect@cd2dae5]" name="allOptionTest" duration-ms="167" started-at="2020-04-21T22:07:28 EDT" finished-at="2020-04-21T22:07:28 EDT">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- allOptionTest -->
-      </class> <!-- com.salesForceDropDown.MultiSelect -->
+        </test-method> <!-- unOrganizeDataTest -->
+      </class> <!-- com.salesForceDropDown.AssertionListDoesExist -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

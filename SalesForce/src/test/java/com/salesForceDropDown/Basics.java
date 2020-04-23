@@ -24,25 +24,24 @@ public class Basics {
 
 	@Test(priority = 1)
 	public void indexTest() {
-		WebElement employee = driver.findElement(By.xpath("//select[starts-with(@id,'CompanyCountry-')]"));
-		Select select = new Select(employee);
+		WebElement country = driver.findElement(By.xpath("//select[starts-with(@id,'CompanyCountry-')]"));
+		Select select = new Select(country);
 		select.selectByIndex(12);
-
 	}
 
 	@Test(priority = 2)
 	public void VisibleTextTest() {
-		WebElement employee = driver.findElement(By.xpath("//select[starts-with(@id,'CompanyCountry-')]"));
-		Select select = new Select(employee);
+		WebElement country = driver.findElement(By.xpath("//select[starts-with(@id,'CompanyCountry-')]"));
+		Select select = new Select(country);
 		select.selectByVisibleText("Antarctica");
 
 	}
 
-	@Test(priority = 3)
+	// @Test(priority = 3)
 	public void ValueTest() throws InterruptedException {
 		Thread.sleep(3000);
-		WebElement employee = driver.findElement(By.xpath("//select[starts-with(@id,'CompanyCountry-')]"));
-		Select select = new Select(employee);
+		WebElement country = driver.findElement(By.xpath("//select[starts-with(@id,'CompanyCountry-')]"));
+		Select select = new Select(country);
 		select.selectByValue("BD");
 
 	}

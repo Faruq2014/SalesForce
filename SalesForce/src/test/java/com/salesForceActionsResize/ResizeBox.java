@@ -35,7 +35,7 @@ public class ResizeBox {
 		Actions action = new Actions(driver);
 		// action.dragAndDropBy(resize, 50, 50).build().perform();
 		// Thread.sleep(3000);
-		action.moveToElement(resize).dragAndDropBy(resize, 70, 70).build().perform();
+		action.moveToElement(resize).dragAndDropBy(resize, 50, 50).build().perform();
 		Thread.sleep(3000);
 		// driver.close();
 

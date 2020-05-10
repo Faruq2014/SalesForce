@@ -2,24 +2,24 @@
 <testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="17092" started-at="2020-04-22T21:55:56 EDT" finished-at="2020-04-22T21:56:13 EDT">
+  <suite name="Default suite" duration-ms="30403" started-at="2020-05-09T18:38:39 EDT" finished-at="2020-05-09T18:39:09 EDT">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="17092" started-at="2020-04-22T21:55:56 EDT" finished-at="2020-04-22T21:56:13 EDT">
-      <class name="com.salesForceDropDown.AssertionListDoesExist">
-        <test-method status="PASS" signature="setUP()[pri:0, instance:com.salesForceDropDown.AssertionListDoesExist@49fc609f]" name="setUP" is-config="true" duration-ms="16112" started-at="2020-04-22T21:55:56 EDT" finished-at="2020-04-22T21:56:12 EDT">
+    <test name="Default test" duration-ms="30403" started-at="2020-05-09T18:38:39 EDT" finished-at="2020-05-09T18:39:09 EDT">
+      <class name="com.salesForceWaitCommands.BasicWaitCmmands">
+        <test-method status="PASS" signature="setUP()[pri:0, instance:com.salesForceWaitCommands.BasicWaitCmmands@49fc609f]" name="setUP" is-config="true" duration-ms="16596" started-at="2020-05-09T18:38:39 EDT" finished-at="2020-05-09T18:38:55 EDT">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUP -->
-        <test-method status="PASS" signature="organizeDataTest()[pri:1, instance:com.salesForceDropDown.AssertionListDoesExist@49fc609f]" name="organizeDataTest" duration-ms="367" started-at="2020-04-22T21:56:12 EDT" finished-at="2020-04-22T21:56:12 EDT">
+        <test-method status="PASS" signature="ElementsToBeClickable()[pri:1, instance:com.salesForceWaitCommands.BasicWaitCmmands@49fc609f]" name="ElementsToBeClickable" duration-ms="3559" started-at="2020-05-09T18:38:55 EDT" finished-at="2020-05-09T18:38:59 EDT">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- organizeDataTest -->
-        <test-method status="PASS" signature="unOrganizeDataTest()[pri:2, instance:com.salesForceDropDown.AssertionListDoesExist@49fc609f]" name="unOrganizeDataTest" duration-ms="549" started-at="2020-04-22T21:56:12 EDT" finished-at="2020-04-22T21:56:13 EDT">
+        </test-method> <!-- ElementsToBeClickable -->
+        <test-method status="PASS" signature="invisibilityOfElementLocated()[pri:2, instance:com.salesForceWaitCommands.BasicWaitCmmands@49fc609f]" name="invisibilityOfElementLocated" duration-ms="10173" started-at="2020-05-09T18:38:59 EDT" finished-at="2020-05-09T18:39:09 EDT">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- unOrganizeDataTest -->
-      </class> <!-- com.salesForceDropDown.AssertionListDoesExist -->
+        </test-method> <!-- invisibilityOfElementLocated -->
+      </class> <!-- com.salesForceWaitCommands.BasicWaitCmmands -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

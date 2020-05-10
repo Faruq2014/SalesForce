@@ -3,12 +3,13 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.salesForceDropDown.AssertionListDoesExist">
+      <class name="com.salesForceWaitCommands.Fluent1">
         <methods>
-          <include name="assertionTest"/>
           <include name="setUP"/>
+          <include name="fluentTest"/>
+          <include name="teardown"/>
         </methods>
-      </class> <!-- com.salesForceDropDown.AssertionListDoesExist -->
+      </class> <!-- com.salesForceWaitCommands.Fluent1 -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

@@ -22,6 +22,20 @@ public class Basics {
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 	}
 
+	@Test(priority = 0)
+	public void generalTest() {
+
+		Select select = new Select(driver.findElement(By.xpath("//select[starts-with(@id,'CompanyCountry-')]")));
+
+		// WebElement
+		// country=driver.findElement(By.xpath("//select[starts-with(@id,'CompanyCountry-')]"));
+		// Select select1 = new Select(country);
+		select.selectByIndex(1);
+		select.selectByValue("BD");
+		select.selectByVisibleText("American Samoa");
+
+	}
+
 	@Test(priority = 1)
 	public void indexTest() {
 		WebElement country = driver.findElement(By.xpath("//select[starts-with(@id,'CompanyCountry-')]"));

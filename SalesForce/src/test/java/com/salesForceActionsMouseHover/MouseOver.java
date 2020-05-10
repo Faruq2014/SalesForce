@@ -45,10 +45,13 @@ public class MouseOver {
 		action.moveToElement(Products).build().perform();
 		Thread.sleep(1000);
 		action.moveToElement(ProductsOView).click().build().perform();
+		
+		
+		
 
 	}
 
-	@Test(priority = 2)
+	@Test(priority = 3)
 	public void mouseOverOneClickTest() throws Throwable {
 		Thread.sleep(1000);
 		WebElement Products = driver.findElement(By.cssSelector("ul[class$='-main-nav searchEnabled']>li:first-child"));

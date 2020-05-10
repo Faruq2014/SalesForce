@@ -37,7 +37,9 @@ public class DropDownOption {
 			String value = empoyee.getAttribute("value");
 			String tag = employee.getTagName();
 			String text = employee.getText();
-			System.out.println("tag is " + tag + " value is " + value + " text is " + text);
+
+			System.out.println(" tag is " + tag + " value is " + value + " text is " + text);
+
 			break;
 		}
 
@@ -50,6 +52,7 @@ public class DropDownOption {
 		WebElement countries = driver.findElement(By.xpath("//select[starts-with(@id,'CompanyCountry-')]"));
 		Select select = new Select(countries);
 		select.selectByValue("BD");
+
 		List<WebElement> totalCountries = select.getOptions();
 		System.out.println("total country is " + totalCountries.size());
 		int number = totalCountries.size();

@@ -71,7 +71,7 @@ public class Assertion {
 			try {
 				// to make sure text string is working.
 				String text = allCountry.get(1).getText(); // it is United States
-				Assert.assertNotEquals(text, "RandomText");
+				Assert.assertNotEquals(text, "united");
 				System.out.println("pass the negative test for text string.");
 			} catch (Exception e) {
 				System.out.println("fail the negative test");

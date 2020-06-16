@@ -44,7 +44,7 @@ public class Fluent2 {
 		FluentWait<WebDriver> wait = new FluentWait<WebDriver>(driver)
 
 				// It should poll webelement after every single second
-				.withTimeout(30, TimeUnit.SECONDS).pollingEvery(1, TimeUnit.SECONDS)
+				.withTimeout(30, TimeUnit.SECONDS).pollingEvery(2, TimeUnit.SECONDS)
 				.ignoring(NoSuchElementException.class);
 
 		// Max time for wait- If conditions are not met within this time frame then it

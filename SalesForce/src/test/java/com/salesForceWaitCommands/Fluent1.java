@@ -36,7 +36,7 @@ public class Fluent1 {
 	public void fluentTest() throws InterruptedException {
 		driver.findElement(By.xpath("(//div[@class='dropdown']/a)[2]")).click();
 
-		FluentWait<WebDriver> wait = new FluentWait<WebDriver>(driver).withTimeout(30, TimeUnit.SECONDS)
+		FluentWait<WebDriver> wait = new FluentWait<WebDriver>(driver).withTimeout(30, TimeUnit.MILLISECONDS)
 				.pollingEvery(5, TimeUnit.SECONDS).ignoring(NoSuchElementException.class);
 
 		wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(By.xpath("//a[@id='forgot_password_link']")));

@@ -29,7 +29,7 @@ public class Fluent3 {
 	@AfterClass
 	public void teardown() {
 		System.out.println("All done");
-		driver.quit();
+		// driver.quit();
 	}
 
 	@Test

@@ -38,5 +38,6 @@ public class AnyKey {
 		act.sendKeys(Keys.BACK_SPACE).pause(Duration.ofSeconds(1)).build().perform();
 		act.sendKeys(Keys.DELETE).pause(Duration.ofSeconds(1)).build().perform();
 		act.sendKeys(Keys.SUBTRACT).pause(Duration.ofSeconds(1)).build().perform();
+		act.sendKeys(Keys.CLEAR);
 	}
 }

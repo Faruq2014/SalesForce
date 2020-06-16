@@ -22,7 +22,7 @@ public class BasicWaitCmmands {
 		driver.get("https://www.salesforce.com/");
 		driver.manage().window().maximize();
 		driver.manage().timeouts().pageLoadTimeout(10, TimeUnit.SECONDS);
-		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(8, TimeUnit.SECONDS);
 	}
 
 	@Test(priority = 1)
@@ -33,7 +33,11 @@ public class BasicWaitCmmands {
 		 * parameters.
 		 * 
 		 */
-		WebDriverWait wait = new WebDriverWait(driver, 15);
+		WebDriverWait wait = new WebDriverWait(driver, 12);
+		// WebElement element =
+		// driver.findElement(By.xpath("(//div[@class='dropdown']/a)[2]"));
+		// wait.until(ExpectedConditions.elementToBeClickable(element));
+
 		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("(//div[@class='dropdown']/a)[2]"))).click();
 
 	}

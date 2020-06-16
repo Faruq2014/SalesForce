@@ -32,11 +32,9 @@ public class Tab {
 	public void tabEvent() throws Throwable {
 		Actions act = new Actions(driver);
 		driver.findElement(By.name("firstname")).sendKeys("faruq");
-		act.sendKeys(Keys.TAB).pause(Duration.ofSeconds(1))
-		.sendKeys("Molla").pause(Duration.ofSeconds(1))
-		.sendKeys(Keys.TAB).pause(Duration.ofSeconds(1))
-		.sendKeys("703").pause(Duration.ofSeconds(1))
-		.sendKeys(Keys.TAB).pause(Duration.ofSeconds(1))
-		.sendKeys("dhhhh").build().perform();
+
+		act.sendKeys(Keys.TAB).pause(Duration.ofSeconds(1)).sendKeys("Molla").pause(Duration.ofSeconds(1))
+				.sendKeys(Keys.TAB).pause(Duration.ofSeconds(1)).sendKeys("703").pause(Duration.ofSeconds(1))
+				.sendKeys(Keys.TAB).pause(Duration.ofSeconds(1)).sendKeys("dhhhh").build().perform();
 	}
 }

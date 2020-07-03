@@ -3,15 +3,12 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.salesForceWaitCommands.BasicWaitCmmandsByMethod">
+      <class name="com.salesForceCalander.Day_Month_YearFromUser">
         <methods>
-          <include name="teardown"/>
-          <include name="visibilityOfElementLocated"/>
-          <include name="setUP"/>
-          <include name="presenceOfElementLocated"/>
-          <include name="invisibilityOfElementLocated"/>
+          <include name="init"/>
+          <include name="returnDay"/>
         </methods>
-      </class> <!-- com.salesForceWaitCommands.BasicWaitCmmandsByMethod -->
+      </class> <!-- com.salesForceCalander.Day_Month_YearFromUser -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

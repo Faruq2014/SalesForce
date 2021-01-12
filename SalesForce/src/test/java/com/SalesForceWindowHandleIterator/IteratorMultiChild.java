@@ -47,7 +47,7 @@ public class IteratorMultiChild {
     
     //window2
     String childWindowID2 = it.next();
-    System.out.println("child window id is "+childWindowID1);
+    System.out.println("child window id is "+childWindowID2);
     driver.switchTo().window(childWindowID2);
     Thread.sleep(2000);
     String childTitle2= driver.getTitle();
@@ -56,7 +56,7 @@ public class IteratorMultiChild {
     // switch to parent
     // window3
     String childWindowID3 = it.next();
-    System.out.println("child window id is "+childWindowID1);
+    System.out.println("child window id is "+childWindowID3);
     driver.switchTo().window(childWindowID3);
     Thread.sleep(2000);
     String childTitle3= driver.getTitle();

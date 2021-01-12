@@ -45,10 +45,7 @@ public class MouseOver {
 		action.moveToElement(Products).build().perform();
 		Thread.sleep(1000);
 		action.moveToElement(ProductsOView).click().build().perform();
-		
-		
-		
-
+	    
 	}
 
 	@Test(priority = 3)

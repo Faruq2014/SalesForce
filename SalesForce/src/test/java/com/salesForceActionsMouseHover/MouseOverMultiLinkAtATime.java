@@ -36,9 +36,10 @@ public class MouseOverMultiLinkAtATime {
 		WebElement spcm = driver.findElement(By.xpath("//a[contains(text(),'SpiceClub Members')]"));
 		WebElement member = driver.findElement(By.xpath("//a[contains(text(),'Sign up')]"));
 		Actions action = new Actions(driver);
-		action.moveToElement(login).build().perform();
-		action.moveToElement(spcm).build().perform();
-		action.moveToElement(member).click().build().perform();
+		//action.moveToElement(login).build().perform();
+		//action.moveToElement(spcm).build().perform();
+		//action.moveToElement(member).click().build().perform();
+		action.moveToElement(login).moveToElement(spcm).moveToElement(member).click().build().perform();
 		Thread.sleep(3000);
 		driver.quit();
 	}

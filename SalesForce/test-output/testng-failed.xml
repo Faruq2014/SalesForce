@@ -3,12 +3,12 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.salesForceCalander.Day_Month_YearFromUser">
+      <class name="com.salesForceDropDown.Basics2ForBatch">
         <methods>
-          <include name="init"/>
-          <include name="returnDay"/>
+          <include name="setUP"/>
+          <include name="selectprintAllTheValuesWithRegularLoop"/>
         </methods>
-      </class> <!-- com.salesForceCalander.Day_Month_YearFromUser -->
+      </class> <!-- com.salesForceDropDown.Basics2ForBatch -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

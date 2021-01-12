@@ -31,10 +31,14 @@ public class Tab {
 	@Test(priority = 1)
 	public void tabEvent() throws Throwable {
 		Actions act = new Actions(driver);
-		driver.findElement(By.name("firstname")).sendKeys("faruq");
+		driver.findElement(By.name("email")).sendKeys("faruq");
 
 		act.sendKeys(Keys.TAB).pause(Duration.ofSeconds(1)).sendKeys("Molla").pause(Duration.ofSeconds(1))
-				.sendKeys(Keys.TAB).pause(Duration.ofSeconds(1)).sendKeys("703").pause(Duration.ofSeconds(1))
-				.sendKeys(Keys.TAB).pause(Duration.ofSeconds(1)).sendKeys("dhhhh").build().perform();
+				.sendKeys(Keys.TAB).pause(Duration.ofSeconds(1)).click().build().perform();
+				
+				
+				
+				//sendKeys("703").pause(Duration.ofSeconds(1))
+				//.sendKeys(Keys.TAB).pause(Duration.ofSeconds(1)).sendKeys("dhhhh").build().perform();
 	}
 }

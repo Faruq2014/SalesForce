@@ -20,24 +20,26 @@ public class Assertion {
 	public void setUP() {
 		System.setProperty("webdriver.chrome.driver", "C:\\SeleniumDriver\\chromedriver_win32\\chromedriver.exe");
 		driver = new ChromeDriver();
-		driver.get("https://www.salesforce.com/form/signup/freetrial-elf-v2/?d=cta-li-promo-147");
+		//driver.get("https://www.salesforce.com/form/signup/freetrial-elf-v2/?d=cta-li-promo-147");
+		driver.get("https://www.salesforce.com/form/demo/salesforce-products/");
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 	}
 
-	@Test(priority = 0)
+	//@Test(priority = 0)
 	public void totalElementTest() {
 		WebElement country = driver.findElement(By.xpath("//select[starts-with(@id,'CompanyCountry-')]"));
 		Select select = new Select(country);
 
 		List<WebElement> allCountry = select.getOptions();
 		int total = allCountry.size();
+		Assert.assertEquals(total, 231);
 		Assert.assertEquals(total, 229);
 		System.out.println(total + " pass the total number of drop down test.");
 
 	}
 
-	@Test(priority = 1)
+	//@Test(priority = 1)
 	public void assertionTest() {
 
 		WebElement country = driver.findElement(By.xpath("//select[starts-with(@id,'CompanyCountry-')]"));
@@ -59,7 +61,7 @@ public class Assertion {
 		select.selectByIndex(23);
 	}
 
-	@Test(priority = 2)
+	//@Test(priority = 2)
 	public void wrongAsseertion() {
 
 		WebElement country = driver.findElement(By.xpath("//select[starts-with(@id,'CompanyCountry-')]"));
@@ -71,7 +73,7 @@ public class Assertion {
 			try {
 				// to make sure text string is working.
 				String text = allCountry.get(1).getText(); // it is United States
-				Assert.assertNotEquals(text, "united");
+				Assert.assertNotEquals(text, "United States");
 				System.out.println("pass the negative test for text string.");
 			} catch (Exception e) {
 				System.out.println("fail the negative test");

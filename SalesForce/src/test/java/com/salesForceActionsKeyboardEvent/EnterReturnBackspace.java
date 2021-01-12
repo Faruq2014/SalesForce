@@ -27,7 +27,7 @@ public class EnterReturnBackspace {
 	@Test(priority = 1)
 	public void returnTest() throws InterruptedException {
 
-		driver.findElement(By.xpath("(//div[@class='dropdown']/a)[2]")).click();
+		driver.findElement(By.xpath("//div[@class='dropdown']/a")).click();
 		driver.findElement(By.id("username")).sendKeys("faruq");
 		Actions act = new Actions(driver);
 		act.sendKeys(Keys.TAB).pause(Duration.ofSeconds(1))

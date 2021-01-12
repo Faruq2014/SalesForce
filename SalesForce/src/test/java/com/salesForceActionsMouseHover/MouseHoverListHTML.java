@@ -42,6 +42,7 @@ public class MouseHoverListHTML {
 
 		List<WebElement> links = driver
 				.findElements(By.xpath("//div[@id='drawer_resources']//div[@class='sub-nav']/ul/li/a"));
+		
 		int total_count = links.size();
 		System.out.println(total_count);
 		for (int i = 0; i < total_count; i++) {

@@ -20,7 +20,8 @@ public class AssertionList {
 	public void setUP() {
 		System.setProperty("webdriver.chrome.driver", "C:\\SeleniumDriver\\chromedriver_win32\\chromedriver.exe");
 		driver = new ChromeDriver();
-		driver.get("https://www.salesforce.com/form/signup/freetrial-elf-v2/?d=cta-li-promo-147");
+		//driver.get("https://www.salesforce.com/form/signup/freetrial-elf-v2/?d=cta-li-promo-147");
+		driver.get("https://www.salesforce.com/form/demo/salesforce-products/");
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 	}
@@ -32,6 +33,7 @@ public class AssertionList {
 
 		String arr[] = { "Employees", "1 - 20 employees", "21 - 200 employees", "201 - 10,000 employees",
 				"10,001+ employees" };
+		
 		Select select = new Select(employee);
 		List<WebElement> allEmployee = select.getOptions();
 		int total = allEmployee.size();
